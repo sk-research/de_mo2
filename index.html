@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asset Detail - I Love RWA</title>
-    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -29,18 +29,25 @@
     <section id="asset-section">
         <div class="asset-header">
             <div class="asset-visualization">
-                <div class="asset-image">Asset Visualization</div>
-                <button class="btn-graph">Graphs</button>
+                <h1>Asset Name</h1>
+                <div class="carousel">Asset Visualization</div>
+                <button class="btn-graph">View Valuation Graph</button>
             </div>
             <div class="asset-info">
-                <h1>Asset Name</h1>
-                <p>Asset Overview in a sentence</p>
-                <p><strong>Company Name:</strong> XYZ</p>
-                <p><strong>Asset Type:</strong> Type</p>
+                <p class="asset-description">Brief asset description here...</p>
+                <p class="asset-type">Asset Type</p>
+                <div class="company-info">
+                    <p><strong>Company Name:</strong></p>
+                    <a href="#"><img src="logo.png" alt="Company Logo"></a>
+                </div>
                 <div class="details-box">
                     <p><strong>Asset Details</strong></p>
-                    <p>Contract Details</p>
-                    <p class="highlighted">Potential Yield Details</p>
+                    <p>Price per token: USDT 0000</p>
+                    <p>Available: 0000 / 0000 tokens</p>
+                    <p>Min Investment: Time & Amount</p>
+                    <p>Blockchain: <span>#Blockchain_Icon</span> & Token Standard: <span>#ERC-6960</span></p>
+                    <p>Smart Contract: <span>#0x000000000000000000000000000000</span></p>
+                    <p class="highlighted" onclick="scrollToCalculator()">Expected Yield: 000%</p>
                 </div>
                 <button class="btn-buy">Buy Now</button>
             </div>
@@ -53,27 +60,24 @@
             <button>Asset Value</button>
             <button>Asset Information</button>
             <button>Legal & Compliance</button>
-            <button>Government Right</button>
+            <button>Governance Right</button>
             <button>Revenue Model</button>
             <button>Documents</button>
         </div>
         <div class="tab-content">
             <p>Details about the section selected in the tab above</p>
         </div>
-
         <div class="detailed-description">
             <h3>Detailed Asset Description ▼</h3>
             <p>Longer description here...</p>
         </div>
-
         <div class="contract-properties">
             <h3>Contract Properties:</h3>
-            <p>Details of the contract...</p>
+            <p>Details of the contract, token, chain, and specifics...</p>
         </div>
-
         <div class="faqs">
             <h3>FAQs regarding the asset ▼</h3>
-            <p>Answers to common questions...</p>
+            <p>Expand for FAQs...</p>
         </div>
     </section>
 
@@ -128,6 +132,12 @@
     <footer id="footer">
         <p>FOOTER</p>
     </footer>
+
+    <script>
+        function scrollToCalculator() {
+            document.getElementById("yield-calculator").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
 
 </body>
 </html>
